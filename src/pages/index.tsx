@@ -24,8 +24,8 @@ const Home = () => {
     if (!peso || !altura) return;
     dispatch(
       calcular({
-        peso: Number(peso),
-        altura: Number(altura),
+        peso: Number(peso.replace(",", ".")),
+        altura: Number(altura.replace(",", ".")),
       })
     );
     setValorImc(Number(imc));
